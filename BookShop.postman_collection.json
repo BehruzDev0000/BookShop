@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "76fa4414-db08-41f7-8eeb-649984ccd2b3",
+		"name": "BookShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "45773708",
+		"_collection_link": "https://behruz-3796625.postman.co/workspace/Behruz's-Workspace~12555259-3137-4a1e-8f79-4806d989b0cd/collection/45773708-76fa4414-db08-41f7-8eeb-649984ccd2b3?action=share&source=collection_link&creator=45773708"
+	},
+	"item": [
+		{
+			"name": "authors",
+			"item": [
+				{
+					"name": "createAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Omon Matjon\", \"bio\": \"She’riyatda o‘z o‘rniga ega.\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/authors"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAuthors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/v1/authors"
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthorById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateAuthorById",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Omon Matjonnov\", \"bio\": \"She’riyatda o‘z o‘rniga ega.\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/authors/12"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAuthorById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"name\": \"Omon Matjonnov\", \"bio\": \"She’riyatda o‘z o‘rniga ega.\" }"
+						},
+						"url": "localhost:3000/api/v1/authors/12"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "createBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"title\": \"Jannatga yo‘l\", \"authorId\": 11, \"isbn\": \"9780000000010\", \"published_year\": 1980 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/books"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBooks",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getBookById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateBookById",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"title\": \"Jannatga yo‘l 2\", \"authorId\": 11, \"isbn\": \"9780000000011\", \"published_year\": 1985 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/books/11"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBookById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/api/v1/books/11"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " { \"first_name\": \"Test\", \"last_name\": \"User\", \"email\": \"test.user@gmail.com\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllusers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getuserById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "borrowings",
+			"item": [
+				{
+					"name": "createBorrowing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 4,\r\n    \"book_id\": 4,\r\n    \"borrow_date\": \"2025-07-10T00:00:00.000Z\",\r\n    \"return_date\": null,\r\n    \"status\": \"OVERDUE\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/borrowings"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBorrowings",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getBorrowingById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateBorrowingById",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 4,\r\n    \"book_id\": 4,\r\n    \"borrow_date\": \"2025-07-11T00:00:00.000Z\",\r\n    \"return_date\": null,\r\n    \"status\": \"OVERDUE\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/borrowings/4"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBorrowerById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
