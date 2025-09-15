@@ -31,4 +31,4 @@ jobs:
             git reset --hard origin/main
             npm install --production
             npm run build
-            pm2 restart bookshop || pm2 start /home/ubuntu/BookShop/ecosystem.config.js --name bookshop
+            pm2 restart bookshop --name bookshop
